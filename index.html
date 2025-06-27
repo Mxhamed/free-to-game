@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Mohamed Tamer" />
+    <meta
+      name="keywords"
+      content="free to play games, online games, pc games, mmorpg, battle royale, shooter games, moba, sandbox, survival games, game browser, play free games, gaming platform, browse games by genre, game categories, latest free games" />
+    <meta
+      name="description"
+      content="Discover and explore the best free-to-play PC games across genres like MMORPG, Battle Royale, Shooter, MOBA, Sandbox, and Survival. Browse by category, sort by release date or relevance, and view game details in a sleek modal interface." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon & Title -->
+    <link rel="shortcut icon" href="./src/assets/fav.ico" type="image/x-icon" />
+    <title>Game Reviews // Review Hundreds of Free Games</title>
+    <!-- Self Hosting Fonts -->
+    <style>
+      @font-face {
+        font-family: "Orbitron";
+        src: url("./src/assets/fonts/Orbitron.woff2") format("woff2"),
+          url("./src/assets/fonts/Orbitron.woff") format("woff");
+        font-weight: 400 900;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        src: url("./src/assets/fonts/OpenSans.woff2") format("woff2"),
+          url("./src/assets/fonts/OpenSans.woff") format("woff");
+        font-weight: 300 800;
+        font-display: swap;
+      }
+      h1,
+      h2,
+      h3,
+      header,
+      nav,
+      .card-footer,
+      .meta-label,
+      .pagination,
+      .gradientText,
+      .game-link {
+        font-family: "Orbitron", "Arial", sans-serif;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- JavaScript -->
+    <script defer src="./src/js/index.js"></script>
+  </head>
+  <body>
+    <div class="container-md">
+      <!-- Name & Logo -->
+      <header>
+        <a href="./index.html">FREETOGAME</a>
+      </header>
+
+      <!-- Categories & Sort BY -->
+      <nav>
+        <ul id="categoriesList">
+          <li>
+            <a
+              href="#"
+              class="active"
+              data-category="mmorpg"
+              title="Massively Multiplayer Online Role-Playing Game"
+              >MMORPG</a
+            >
+          </li>
+
+          <li>
+            <a href="#" data-category="battle-royale" title="Battle Royale"
+              >BR</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#"
+              data-category="moba"
+              title="Multiplayer Online Battle Arena"
+              >MOBA</a
+            >
+          </li>
+
+          <li>
+            <a href="#" data-category="sandbox">Sandbox</a>
+          </li>
+
+          <li>
+            <a href="#" data-category="shooter">Shooter</a>
+          </li>
+
+          <li>
+            <a href="#" data-category="survival">Survival</a>
+          </li>
+        </ul>
+
+        <div class="custom-dropdown">
+          <button
+            aria-label="Open Dropdown"
+            class="dropdown-trigger"
+            id="sortTrigger"
+            aria-expanded="false">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="m7 10l5 5m0 0l5-5" />
+            </svg>
+          </button>
+
+          <div class="dropdown-menu" id="sortMenu">
+            <button class="dropdown-option" data-value="alphabetical">
+              Sort A-Z
+            </button>
+            <button class="dropdown-option" data-value="popularity">
+              Sort by Popularity
+            </button>
+            <button class="dropdown-option selected" data-value="relevance">
+              Sort by Relevance
+            </button>
+            <button class="dropdown-option" data-value="release-date">
+              Sort by Release Date
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Game Cards -->
+      <main id="searchResults"></main>
+
+      <!-- Footer & Copyrights -->
+      <footer>
+        <p>
+          &copy; Built and Improved by
+          <a href="#" class="gradientText">Mohamed Tamer</a>
+          <br />All Rights Reserved
+        </p>
+      </footer>
+    </div>
+
+    <!-- Modal (Game Details)-->
+    <div id="overlay">
+      <div class="container-md">
+        <div id="modal">
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
